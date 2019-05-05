@@ -1,0 +1,75 @@
+﻿@model y_market.ViewModels.OrderView
+@{
+    ViewBag.Title = "Nueva orden";
+}
+
+<h2>@ViewBag.Title</h2>
+@if (ViewBag.Error!=null)
+{
+    <h4><span class="alert alert-danger">@ViewBag.Error</span></h4>
+}
+@if (ViewBag.Message!=null)
+{
+    <h4><span class="alert alert-success">@ViewBag.Message</span></h4>
+}
+    @using (Html.BeginForm("NewOrder","Orders",FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Customer.CustomerID, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Customer.CustomerID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @Html.ActionLink("Add Product", "AddProduct", new { }, htmlAttributes: new { @class = "btn btn-primary" })
+
+            <input type="submit" value="Save Order" id="NewOrder" class="btn btn-success" />
+
+
+        </div>
+    }
+    <h2>Detalles</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Value)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                </td>
+            </tr>
+        }
+    </table>

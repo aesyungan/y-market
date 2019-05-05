@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "y-market", "y-market\y-market.csproj", "{7EE8393C-2398-4616-9673-6AED8DE7E3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "y-market.Tests", "y-market.Tests\y-market.Tests.csproj", "{FADE27D2-AAFC-4559-A768-5E72AE5A38A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE8393C-2398-4616-9673-6AED8DE7E3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE8393C-2398-4616-9673-6AED8DE7E3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE8393C-2398-4616-9673-6AED8DE7E3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE8393C-2398-4616-9673-6AED8DE7E3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FADE27D2-AAFC-4559-A768-5E72AE5A38A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADE27D2-AAFC-4559-A768-5E72AE5A38A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADE27D2-AAFC-4559-A768-5E72AE5A38A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADE27D2-AAFC-4559-A768-5E72AE5A38A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE8D4E17-F1BB-421C-B7C6-33F678EBBA6D}
+	EndGlobalSection
+EndGlobal
